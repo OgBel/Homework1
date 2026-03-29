@@ -21,7 +21,7 @@ a {
   background-repeat: no-repeat;
   background-image: url(img/Star-fon.svg);
   background-position: right;
-  padding-bottom: 24px;
+  padding-bottom: 156px;
   padding-top: 0;
 }
 
@@ -337,7 +337,7 @@ a {
 }
 
 .cart-box {
-  margin-top: 40px;
+  margin-top: 0;
   display: flex;
   gap: 32px;
   columns: 3;
