@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -18,11 +19,10 @@ a {
 
 .top {
   background: rgb(225, 255, 143);
+  padding-bottom: 156px;
   background-repeat: no-repeat;
   background-image: url(img/Star-fon.svg);
   background-position: right;
-  padding-bottom: 156px;
-  padding-top: 0;
 }
 
 .game1 {
@@ -114,6 +114,30 @@ a {
   max-width: 720px;
 }
 
+.mobile-text {
+  display: none;
+}
+
+.mobile-title {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .desktop-text {
+    display: none;
+  }
+  .mobile-text {
+    display: block;
+  }
+}
+.menu-mob {
+  display: none;
+}
+
+.banner__mobile {
+  display: none;
+}
+
 .banner {
   gap: 10px;
   border: 1px;
@@ -139,6 +163,26 @@ a {
   background: #202027;
   padding-top: 94px;
   padding-bottom: 94px;
+  position: relative;
+}
+
+/* Большая звезда (справа) */
+.container__star-big {
+  position: absolute;
+  right: 400px;
+  top: 80px;
+  width: 585px;
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.container__star-small {
+  position: absolute;
+  left: 570px;
+  top: 760px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .container__title {
@@ -146,10 +190,11 @@ a {
   font-weight: 700;
   line-height: 78px;
   text-align: left;
+  padding-top: 0;
   padding-bottom: 24px;
   color: #FFFFFF;
   scroll-behavior: smooth;
-  max-width: 314px; 
+  max-width: 314px;
 }
 
 .container__text {
@@ -215,15 +260,26 @@ a {
 .cart4 {
   background-color: #fff;
   width: 378px;
-  margin-top: 36px;
+  margin-top: 32px;
   border-radius: 30px;
   height: 551px;
+  position: relative;
+}
+.cart4__fist {
+  position: absolute;
+  top: 30px;
+  right: 64px;
+  width: 250px;
+  border-radius: 19px;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .cart5 {
   background-color: #fff;
   width: 378px;
-  margin-top: 40px;
+  margin-top: 32px;
   border-radius: 30px;
   height: 512px;
 }
@@ -231,7 +287,7 @@ a {
 .cart6 {
   background-color: #fff;
   width: 378px;
-  margin-top: 36px;
+  margin-top: 32px;
   border-radius: 30px;
   height: 551px;
 }
@@ -340,6 +396,356 @@ a {
   margin-top: 0;
   display: flex;
   gap: 32px;
-  columns: 3;
+  -moz-columns: 3;
+       columns: 3;
 }
-/*# sourceMappingURL=style.css.map */
+
+.games-mini {
+  background-color: rgb(32, 32, 39);
+  padding-bottom: 144px;
+  position: relative;
+  z-index: 0;
+}
+.games-mini__container {
+  position: relative;
+  margin-bottom: 72px;
+}
+.games-mini__star1 {
+  position: absolute;
+  z-index: 1;
+  left: 1200px;
+  top: 100px;
+}
+.games-mini__star2 {
+  position: absolute;
+  z-index: 1;
+  right: -100px;
+  top: 3330px;
+}
+.games-mini__title {
+  color: #fff;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 78px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.mini-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: center;
+}
+
+.mini-card {
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  border-radius: 30px;
+  background: #FFF;
+  box-shadow: 0 20px 67px -12px rgba(0, 0, 0, 0.13);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+.mini-card:hover {
+  transform: scale(1.02);
+}
+.mini-card {
+  flex-direction: row-reverse;
+}
+.mini-card--contrary, .mini-card--contrary1 {
+  flex-direction: row;
+  position: relative;
+}
+.mini-card__img {
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  background-color: #fff;
+  transform: scale(1.02);
+}
+.mini-card__content {
+  width: 50%;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.mini-card__name {
+  color: #202027;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59px;
+  margin-bottom: 24px;
+}
+.mini-card__text {
+  color: #202027;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 36px;
+}
+.mini-card__button {
+  display: inline-block;
+  border-radius: 60px;
+  background-color: #202027;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  padding: 16px 0;
+  width: 247px;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+.mini-card__button:hover {
+  background-color: #fff;
+  color: #202027;
+  border: 1px solid #202027;
+}
+
+.mini-card__fist {
+  position: absolute;
+  top: 42px;
+  right: 698px;
+  width: 402px;
+  border-radius: 19px;
+  opacity: 1;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .games-mini {
+    padding-bottom: 48px;
+  }
+  .games-mini__star1, .games-mini__star2 {
+    display: none;
+  }
+  .games-mini__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 48px;
+    text-align: center;
+  }
+  .mini-cards {
+    gap: 24px;
+  }
+  .mini-card {
+    max-width: 343px;
+    flex-direction: column;
+  }
+  .mini-card--contrary, .mini-card--contrary1 {
+    flex-direction: column;
+  }
+  .mini-card__img {
+    width: 100%;
+    background-color: #fff;
+    transform: scale(1.02);
+  }
+  .mini-card__content {
+    width: 100%;
+    padding: 24px;
+  }
+  .mini-card__name {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 16px;
+  }
+  .mini-card__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+  .mini-card__button {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+}
+.footer {
+  background-color: rgb(189, 237, 53);
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer__text {
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 29px;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top {
+    height: 649px;
+    padding-top: 147px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+    background: url(./img/stars-big_mobil.png) 39px -102px no-repeat rgb(225, 255, 143);
+    text-align: center;
+  }
+  .game1, .game2, .game3, .game4 {
+    display: none;
+  }
+  .header__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: center;
+    padding-top: 0;
+    max-width: 100%;
+  }
+  .header__text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    max-width: 100%;
+    padding-top: 0;
+  }
+  .btn {
+    display: none;
+  }
+  .menu-mob {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 167px;
+  }
+  .menu-mob__button {
+    width: 285px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    background-color: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  .menu-mob__button:hover {
+    background-color: rgb(32, 32, 39);
+    color: rgb(255, 255, 255);
+  }
+  .banner {
+    gap: 27.4px;
+    height: 51px;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+  }
+  .banner__text {
+    font-size: 16px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .banner__text:first-child {
+    margin-left: 24px;
+  }
+  .banner__img {
+    display: none;
+  }
+  .banner__mobile {
+    display: inline-flex;
+    align-items: center;
+  }
+  .banner__mobile img {
+    width: 19.34px;
+    height: auto;
+  }
+  .container {
+    display: none !important;
+  }
+  .games-mini {
+    padding-bottom: 10px;
+  }
+  .games-mini__star1, .games-mini__star2 {
+    display: none;
+  }
+  .games-mini__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-top: 48px;
+    text-align: left;
+    margin-bottom: 48px;
+    padding-left: 0;
+  }
+  .mini-cards {
+    gap: 24px;
+  }
+  .mini-card {
+    max-width: 100%;
+    flex-direction: column;
+  }
+  .mini-card--contrary, .mini-card--contrary1 {
+    flex-direction: column;
+  }
+  .mini-card__img {
+    width: 100%;
+    transform: scale(1);
+  }
+  .mini-card__content {
+    width: 100%;
+    padding: 24px;
+  }
+  .mini-card__name {
+    font-size: 32px;
+    line-height: 39px;
+    margin-bottom: 16px;
+  }
+  .mini-card__text {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 32px;
+  }
+  .mini-card__text br {
+    display: none;
+  }
+  .mini-card__button {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  .mini-card__button:hover {
+    background-color: #202027;
+    color: #fff;
+    border: none;
+  }
+  .mini-card__fist {
+    width: 246px;
+    top: 19px;
+    right: 55px;
+  }
+  .footer {
+    height: 100px;
+    background-color: rgb(189, 237, 53);
+  }
+  .footer__text {
+    font-size: 16px;
+    padding: 0;
+    line-height: 100px;
+  }
+  body {
+    background-color: rgb(189, 237, 53);
+  }
+}/*# sourceMappingURL=style.css.map */

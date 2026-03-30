@@ -1,0 +1,207 @@
+@media (max-width: 767px) {
+    .center {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    // ----- Блок top (шапка) -----
+    .top {
+        height: 649px;                      
+        padding-top: 147px;                
+        margin-bottom: 0;
+        box-sizing: border-box;
+        background: url(./img/stars-big_mobil.png) 39px -102px no-repeat rgb(225, 255, 143);
+        text-align: center;
+    }
+
+    // Скрываем лишние звёзды
+    .game1, .game2, .game3, .game4 {
+        display: none;
+    }
+
+    // Заголовок
+    .header__title {
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 49px;
+        text-align: center;
+        padding-top: 0;
+        max-width: 100%;
+    }
+
+    // Текст описания
+    .header__text {
+        font-size: 16px;
+        line-height: 20px;
+        text-align: center;
+        max-width: 100%;
+        padding-top: 0;
+    }
+
+    // Десктопная кнопка скрыта
+    .btn {
+        display: none;
+    }
+
+    // Мобильная кнопка
+    .menu-mob {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 167px;              
+
+        &__button {
+            width: 285px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            box-sizing: border-box;
+            border: 1px solid rgb(32, 32, 39);
+            border-radius: 60px;
+            background-color: rgb(32, 32, 39);
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgb(32, 32, 39);
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+
+    // ----- Бегущая строка -----
+    .banner {
+    gap: 27.4px;
+    height: 51px;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    align-items: center;
+
+    &__text {
+        font-size: 16px;
+        padding-left: 0;
+        padding-right: 0;
+        &:first-child {
+            margin-left: 24px;   // отступ для "Викторина"
+        }
+    }
+
+    &__img {
+        display: none;           // скрываем десктопные звёзды
+    }
+
+    &__mobile {
+        display: inline-flex;
+        align-items: center;
+        img {
+            width: 19.34px;
+            height: auto;
+        }
+    }
+}
+
+    // ----- Блок «Об играх» -----
+    .container {
+        display: none !important;
+    }
+
+    // ----- Блок «Мини-игры» -----
+    .games-mini {
+        padding-bottom: 10px;
+
+        &__star1,
+        &__star2 {
+            display: none;
+        }
+
+        &__title {
+            font-size: 40px;
+            line-height: 49px;
+            padding-top: 48px;
+            text-align: left;
+            margin-bottom: 48px;
+            padding-left: 0;
+        }
+    }
+
+    .mini-cards {
+        gap: 24px;
+    }
+
+    .mini-card {
+        max-width: 100%;
+        flex-direction: column;
+
+        &--contrary,
+        &--contrary1 {
+            flex-direction: column;
+        }
+
+        &__img {
+            width: 100%;
+            transform: scale(1);
+        }
+
+        &__content {
+            width: 100%;
+            padding: 24px;
+        }
+
+        &__name {
+            font-size: 32px;
+            line-height: 39px;
+            margin-bottom: 16px;
+        }
+
+        &__text {
+            font-size: 16px;
+            line-height: 20px;
+            margin-bottom: 32px;
+            br {
+                display: none;
+            }
+        }
+
+        &__button {
+            width: 100%;
+            font-size: 16px;
+            padding: 16px 0;
+
+            &:hover {
+                background-color: #202027;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+
+    .mini-card__fist {
+        width: 246px;
+        top: 19px;
+        right: 55px;
+    }
+
+    // ----- Подвал -----
+    .footer {
+        height: 100px;
+        background-color: rgb(189, 237, 53);
+
+        &__text {
+            font-size: 16px;
+            padding: 0;
+            line-height: 100px;
+        }
+    }
+
+    body {
+        background-color: rgb(189, 237, 53);
+    }
+}
